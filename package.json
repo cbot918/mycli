@@ -1,0 +1,24 @@
+{
+  "name": "creator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node main.js a.png",
+    "build-mac": "pkg -t node16-macos-x64 -o main .",
+    "build-linux": "pkg -t node16-linux-x64 -o main ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.1",
+    "inquirer": "^6.0.0",
+    "shelljs": "^0.8.2"
+  },
+  "bin": {
+    "mycli": "./main.js"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  }
+}
