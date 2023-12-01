@@ -1,7 +1,6 @@
 const log = console.log; // 偷懶用xD
 const { exec } = require("child_process");
 
-// 主函式
 const main = async () => {
   if (process.argv.length === 2) {
     // process.argv:
@@ -12,14 +11,12 @@ const main = async () => {
     return;
   }
 
-  // 讀入使用者給的檔名
   const source = process.argv[2];
   const output = "output";
 
   zip(source, output);
 };
 
-// zip 用來壓縮圖片
 function zip(pictureName, fileName) {
   // exec 可以用來執行指令
   exec(`zip ${fileName}.zip ${pictureName}`, (err, stdout, stderr) => {
